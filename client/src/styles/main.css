@@ -1,0 +1,142 @@
+body{
+    position: relative;
+    margin: 0px;
+}
+ul, li, a{
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+}
+h1{
+    margin: 0;
+}
+section{
+    margin: 90px 0;
+}
+section:last-of-type{
+    margin-bottom: 0;
+}
+img{
+    max-width: 100%;
+}
+
+.content{
+    max-width: 100%;
+    background-color: #f1eff0;
+}
+.page-content{
+    padding-top: 100px;
+    margin-left: 15%;
+    background: #f1eff0;
+    padding-bottom: 20px;
+    min-height: 90vh;
+}
+
+/*header*/
+.main-header{
+    position: fixed;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    width: 100%;
+    background-color: #f1eff0;
+    padding: 10px 0;
+    padding-left: 5%;
+    margin: 0;
+    z-index: 1;
+    box-shadow: 1px 1px 2px #8888884f;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-column: 1;
+    margin: auto 0;
+}
+.title span{
+    padding: 0 10px;
+}
+.user{
+    display: flex;
+    text-align: right;
+    margin-right: 15%;
+    grid-column: 2;
+    justify-self: flex-end;
+}
+.user img{
+    max-height: 50px;
+    border-radius: 50%;
+}
+.name{
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+}
+.name a{
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+/* nav */
+
+.nav{
+    position: fixed;
+    min-height: 90vh;
+    width: 160px;
+    margin-left: 1.5%;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 70px;
+    padding: 15px;
+    z-index: 2;
+}
+
+.nav ul li.active{
+    background-color: #f1eff0;
+    margin-right: -20px;
+    padding-right: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.nav ul li.active a{
+    background-color: #f1eff0;
+}
+.nav ul li.active img{
+    border-radius: initial;
+}
+
+.nav ul li{
+    margin: 50px 0;
+}
+.nav ul li a{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 25px 20px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+.nav ul li span{
+    margin: auto;
+}
+
+.nav ul img{
+    vertical-align: middle;
+    width: 20px;
+    padding:15px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    background-color: #f1eff0;
+}
+.nav ul li:nth-last-child(2) img{
+    width: 30px;
+}
+.container-logo{
+    margin:40px 0;
+}
+.container-logo img{
+    margin: auto;
+}
