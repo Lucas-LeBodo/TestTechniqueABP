@@ -1,21 +1,30 @@
 import React, { Fragment, useState } from 'react';
 import axios from 'axios';
-
+import {useHistory} from 'react-router-dom';
 
 function App() {
 
+    const history = useHistory(); 
     const [username, setUsername] = useState();
     const [pwd, setPwd] = useState();
 
     const submit = () => {
 
-        console.log(username, pwd)
+        let dataArray = [username, pwd];
         axios.post('https://localhost:8000/log/',{
-            username : username,
-            password : pwd
+            body : dataArray
+        }).then(response => {
+            let userRole = response['data']['user']['0']['roles']['role'];
+            if(userRole) {
+                localStorage.setItem("jwt", userRole);
+                history.push("/");
+            }
+            
         }).catch((error) => {
         })
     }
+
+
 
     return (
         <Fragment>
