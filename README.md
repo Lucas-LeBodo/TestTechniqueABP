@@ -7,12 +7,12 @@ this project was carried out within the framework of a technical maintenance for
 ## To begin
 **How to start the project?**
 
-To start the client use the command ``npm start`` in the **/client**
-To start the server use the command ``symfony server:start`` in the **/server**
+ * To start the client use the command ``npm start`` in the **/client**
+ * To start the server use the command ``symfony server:start`` in the **/server**
 
 
-**User acces** : username = User / PassWord = User
-**Admin acces** : username = Admin / PassWord = Admin
+ * **User acces** : username = User / PassWord = User
+ * **Admin acces** : username = Admin / PassWord = Admin
  __!!! Please Check that all libraries / dependencies are installed !!!__
 ## Made with
 
