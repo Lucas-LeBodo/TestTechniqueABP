@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 
-function App() {
+function Log() {
 
     const history = useHistory(); 
     const [username, setUsername] = useState();
@@ -39,4 +39,4 @@ function App() {
     );
 }
   
-export default App;
+export default Log;
