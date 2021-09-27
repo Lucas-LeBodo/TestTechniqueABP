@@ -12,9 +12,6 @@ const Uploadxlsx = () => {
             axios.post('https://localhost:8000/data/', { 
                 body: datacar
             })
-            .then(function(response) {
-                console.log(response)
-            })
         }
         
     }, [datacar]);
@@ -31,8 +28,9 @@ const Uploadxlsx = () => {
                     readedData.Sheets[sheet]
                 );
                 let jsonObject = rowObject;
-                setDatacar(jsonObject);
                 console.log(jsonObject);
+                setDatacar(jsonObject);
+
             });     
         }
         reader.readAsBinaryString(f);
