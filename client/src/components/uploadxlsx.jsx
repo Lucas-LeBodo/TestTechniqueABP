@@ -28,7 +28,6 @@ const Uploadxlsx = () => {
                     readedData.Sheets[sheet]
                 );
                 let jsonObject = rowObject;
-                console.log(jsonObject);
                 setDatacar(jsonObject);
 
             });     
@@ -38,7 +37,6 @@ const Uploadxlsx = () => {
     return (
         <Fragment>
             <input type="file" name="file" onChange={onChangeHandler} />
-            <input type="submit" />
         </Fragment>
     );
 };

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Uploadxlsx from '../components/uploadxlsx'
+import DataTable from '../components/datatable'
 
 function App() {
 
@@ -27,11 +28,12 @@ function App() {
                     <img src="https://communication.autobonplan.com/abp-home/img/Logo_Autobonplan.png" alt=""/>
                 </div>
                 <ul>
+                    {xlsx}
                 </ul>
             </section>
             <div className="page-content">
-                {xlsx}
             </div>
+            <DataTable />
             </div>
         </Fragment>
     );
