@@ -47,4 +47,19 @@ class DataCarController extends AbstractController
         return $this->json(["code"=>200, 'user'=>$data, 200]);
         
     }
+
+
+    /**
+    *  @Route("/data/", name="data", methods={"GET", "HEAD"})
+    */
+    public function getData(Request $request, EntityManagerInterface $em) {
+        $entityManager = $this->getDoctrine()->getManager();
+        $arrivage = $entityManager->getRepository(Arrivage::class)->findAll();
+
+        $dataArray = [];
+        foreach($arrivage as $element) {
+            array_push($dataArray, $element);
+        }
+        return $this->json(["code"=>200, 'user'=>$dataArray, 200]);
+    }
 }

@@ -35,17 +35,7 @@ class ArrivageRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function removeAll() {
-        $query = $this->createQuery('DELETE FROM arrivage');
-        $query->execute();
-    }
 
-    public function getCar ($carData) {
-        $query = $this->createQueryBuilder('c');
-        $sql = 'SELECT * FROM arrivage';
-        $query = $query->getQuery();
-        return $query->execute();
-    }
     /*
     public function findOneBySomeField($value): ?Arrivage
     {

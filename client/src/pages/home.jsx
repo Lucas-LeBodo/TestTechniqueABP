@@ -32,8 +32,8 @@ function App() {
                 </ul>
             </section>
             <div className="page-content">
+                <DataTable />
             </div>
-            <DataTable />
             </div>
         </Fragment>
     );
