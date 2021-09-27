@@ -17,8 +17,8 @@ const Uploadxlsx = () => {
     }, [datacar]);
 
     const onChangeHandler = (e) => {
-        var files = e.target.files, f = files[0];
-        var reader = new FileReader();
+        let files = e.target.files, f = files[0];
+        let reader = new FileReader();
         reader.onload = (e) => {
 
             var data = e.target.result;

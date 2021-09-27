@@ -140,3 +140,14 @@ img{
 .container-logo img{
     margin: auto;
 }
+
+
+.log-btn {
+    display : block;
+    border: 1px solid #000000;
+    cursor: pointer;
+    width: 150px;
+}
+.log-btn:active {
+    background-color: #555555;
+}

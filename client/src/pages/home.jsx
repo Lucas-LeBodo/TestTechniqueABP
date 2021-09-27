@@ -3,6 +3,15 @@ import React, { Fragment } from 'react';
 import Uploadxlsx from '../components/uploadxlsx'
 
 function App() {
+
+    let token = localStorage.getItem('jwt');
+    let xlsx = '';
+
+    if(token === "ROLE_ADMIN"){
+        xlsx = <Uploadxlsx />
+    }
+
+
     return (
         <Fragment>
             <div className="content">
@@ -10,7 +19,7 @@ function App() {
                     <div className="title"><h1>ARRIVAGE</h1></div>
                     <div className="user">
                         <img id="user_photo"src="https://img.icons8.com/ios/452/user--v1.png" alt="" />
-                        <div className="name"><span><span id="firstname"></span> <span id="lastname"></span></span> <a id="logout" href="/">Déconnection</a></div>
+                        <div className="name"><span><span id="firstname"></span> <span id="lastname"></span></span> <a id="logout" href="/log">Déconnexion</a></div>
                     </div>
                 </section>
             <section className="nav">
@@ -21,7 +30,7 @@ function App() {
                 </ul>
             </section>
             <div className="page-content">
-                <Uploadxlsx />
+                {xlsx}
             </div>
             </div>
         </Fragment>
